@@ -1,0 +1,517 @@
+.conquistas-pagina {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+}
+
+.conquistas-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.conquistas-cabecalho
+> div:first-child
+> span {
+  color: #087a54;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.conquistas-cabecalho h1 {
+  margin: 6px 0 0;
+  color: #14261f;
+  font-size: clamp(
+    27px,
+    3vw,
+    38px
+  );
+  letter-spacing: -0.05em;
+}
+
+.conquistas-cabecalho p {
+  max-width: 580px;
+  margin: 7px 0 0;
+  color: #687b73;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.conquistas-nivel {
+  min-width: 230px;
+  border: 1px solid #d5e5dd;
+  border-radius: 14px;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background:
+    linear-gradient(
+      145deg,
+      #edf8f3,
+      #ffffff
+    );
+}
+
+.conquistas-nivel
+> span {
+  width: 41px;
+  height: 41px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: white;
+  font-size: 19px;
+}
+
+.conquistas-nivel div {
+  display: flex;
+  flex-direction: column;
+}
+
+.conquistas-nivel small {
+  color: #788b82;
+  font-size: 7px;
+}
+
+.conquistas-nivel strong {
+  margin-top: 3px;
+  color: #14261f;
+  font-size: 9px;
+}
+
+.conquistas-principio {
+  margin-top: 18px;
+  border: 1px solid #d3e6dc;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #f0f8f4;
+}
+
+.conquistas-principio
+> span {
+  width: 39px;
+  height: 39px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: white;
+  color: #087a54;
+  font-size: 16px;
+}
+
+.conquistas-principio strong {
+  color: #14261f;
+  font-size: 9px;
+}
+
+.conquistas-principio p {
+  margin: 4px 0 0;
+  color: #687b73;
+  font-size: 8px;
+}
+
+.conquistas-resumo {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 13px;
+}
+
+.conquistas-resumo article {
+  min-height: 108px;
+  border: 1px solid #e0e9e4;
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: white;
+}
+
+.conquistas-resumo article
+> span {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #edf6f2;
+  font-size: 17px;
+}
+
+.conquistas-resumo article
+> div {
+  display: flex;
+  flex-direction: column;
+}
+
+.conquistas-resumo small {
+  color: #687b73;
+  font-size: 8px;
+}
+
+.conquistas-resumo strong {
+  margin-top: 4px;
+  color: #14261f;
+  font-size: 17px;
+}
+
+.conquistas-progresso-geral {
+  margin-top: 16px;
+  border: 1px solid #d5e5dd;
+  border-radius: 15px;
+  padding: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      #eff9f4,
+      #ffffff
+    );
+}
+
+.conquistas-progresso-geral
+> div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.conquistas-progresso-geral span {
+  color: #50645b;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.conquistas-progresso-geral strong {
+  color: #087a54;
+  font-size: 14px;
+}
+
+.conquistas-progresso-barra {
+  height: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dce9e3;
+}
+
+.conquistas-progresso-barra span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      90deg,
+      #50bf8d,
+      #087a54
+    );
+}
+
+.conquistas-progresso-geral p {
+  margin: 7px 0 0;
+  color: #7b8d85;
+  font-size: 7px;
+}
+
+.conquistas-bloco {
+  margin-top: 16px;
+  border: 1px solid #e0e9e4;
+  border-radius: 15px;
+  padding: 20px;
+  background: white;
+}
+
+.conquistas-bloco-topo
+span {
+  color: #087a54;
+  font-size: 8px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.conquistas-bloco-topo h2 {
+  margin: 4px 0 0;
+  color: #14261f;
+  font-size: 14px;
+}
+
+.conquistas-grid {
+  margin-top: 17px;
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 12px;
+}
+
+.conquista-card {
+  min-height: 205px;
+  border: 1px solid #e0e9e4;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  background: #fbfdfc;
+}
+
+.conquista-card.desbloqueada {
+  border-color: #c9e5d8;
+  background:
+    linear-gradient(
+      145deg,
+      #edf9f3,
+      #ffffff
+    );
+}
+
+.conquista-card.bloqueada {
+  background: #fafcfb;
+}
+
+.conquista-icone {
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: white;
+  font-size: 20px;
+}
+
+.conquista-status {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: #edf4f0;
+  color: #687b73;
+  font-size: 6px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.conquista-card.desbloqueada
+.conquista-status {
+  background: #dff3e9;
+  color: #087a54;
+}
+
+.conquista-card h3 {
+  margin: 14px 0 0;
+  color: #14261f;
+  font-size: 10px;
+}
+
+.conquista-card p {
+  min-height: 36px;
+  margin: 6px 0 0;
+  color: #687b73;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.conquista-completa {
+  margin-top: 18px;
+}
+
+.conquista-completa
+> span {
+  color: #087a54;
+  font-size: 7px;
+  font-weight: 850;
+}
+
+.conquista-completa
+> div,
+.conquista-progresso-barra {
+  height: 8px;
+  margin-top: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e1ebe6;
+}
+
+.conquista-completa i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #087a54;
+}
+
+.conquista-progresso {
+  margin-top: 17px;
+}
+
+.conquista-progresso
+> div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conquista-progresso span {
+  color: #788b82;
+  font-size: 7px;
+}
+
+.conquista-progresso strong {
+  color: #14261f;
+  font-size: 8px;
+}
+
+.conquista-progresso-barra span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      90deg,
+      #73c7a3,
+      #087a54
+    );
+}
+
+.conquistas-vazio {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.conquistas-vazio
+> span {
+  font-size: 35px;
+}
+
+.conquistas-vazio h3 {
+  margin: 10px 0 0;
+  color: #14261f;
+  font-size: 11px;
+}
+
+.conquistas-vazio p {
+  margin: 5px 0 0;
+  color: #687b73;
+  font-size: 8px;
+}
+
+.conquistas-vazio a {
+  margin-top: 12px;
+  border-radius: 9px;
+  padding: 9px 12px;
+  background: #087a54;
+  color: white;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.conquistas-mensagem-final {
+  margin-top: 16px;
+  border: 1px solid #d5e6dd;
+  border-radius: 14px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background:
+    linear-gradient(
+      90deg,
+      #f0f9f5,
+      #fbfdfc
+    );
+}
+
+.conquistas-mensagem-final
+> span {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: white;
+  font-size: 18px;
+}
+
+.conquistas-mensagem-final strong {
+  color: #14261f;
+  font-size: 9px;
+}
+
+.conquistas-mensagem-final p {
+  margin: 4px 0 0;
+  color: #687b73;
+  font-size: 8px;
+}
+
+.conquistas-carregando {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.conquistas-carregando
+> span {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #dce9e3;
+  border-top-color: #087a54;
+  border-radius: 50%;
+  animation:
+    conquistasGirar
+    .8s linear infinite;
+}
+
+.conquistas-carregando strong {
+  color: #687b73;
+  font-size: 9px;
+}
+
+@keyframes conquistasGirar {
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .conquistas-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .conquistas-resumo {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .conquistas-cabecalho {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .conquistas-nivel {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .conquistas-grid,
+  .conquistas-resumo {
+    grid-template-columns: 1fr;
+  }
+}
