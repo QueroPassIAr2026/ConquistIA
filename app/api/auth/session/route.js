@@ -9,6 +9,9 @@ import {
 export const runtime =
   "nodejs";
 
+export const dynamic =
+  "force-dynamic";
+
 const DURACAO_SESSAO_MS =
   5 *
   24 *
@@ -40,8 +43,8 @@ export async function POST(
     }
 
     /*
-      Confirma que o token pertence
-      a um usuário válido do Firebase.
+      Valida primeiro o token
+      recebido do Firebase Web.
     */
 
     await adminAuth.verifyIdToken(
@@ -49,22 +52,28 @@ export async function POST(
     );
 
     /*
-      Cria o cookie de sessão.
+      Cria a sessão HTTPOnly.
     */
 
     const sessionCookie =
-      await adminAuth.createSessionCookie(
-        idToken,
-        {
-          expiresIn:
-            DURACAO_SESSAO_MS,
-        }
-      );
+      await adminAuth
+        .createSessionCookie(
+          idToken,
+          {
+            expiresIn:
+              DURACAO_SESSAO_MS,
+          }
+        );
 
     const resposta =
-      NextResponse.json({
-        ok: true,
-      });
+      NextResponse.json(
+        {
+          ok: true,
+        },
+        {
+          status: 200,
+        }
+      );
 
     resposta.cookies.set(
       "conquistia_session",
@@ -76,11 +85,9 @@ export async function POST(
           process.env.NODE_ENV ===
           "production",
 
-        sameSite:
-          "lax",
+        sameSite: "lax",
 
-        path:
-          "/",
+        path: "/",
 
         maxAge:
           Math.floor(
@@ -93,17 +100,16 @@ export async function POST(
     return resposta;
   } catch (erro) {
     console.error(
-      "ERRO AO CRIAR SESSÃO FIREBASE:"
+      "ERRO /api/auth/session:",
+      erro
     );
-
-    console.error(erro);
 
     return NextResponse.json(
       {
         ok: false,
 
         erro:
-          "Não foi possível criar a sessão.",
+          "Não foi possível iniciar a sessão.",
 
         detalhe:
           process.env.NODE_ENV ===
